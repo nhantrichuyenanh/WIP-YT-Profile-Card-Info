@@ -1,5 +1,5 @@
 >[!NOTE]
-> Since add-on has to get data from clicking YouTube comments' profiles, it's unfeasible to use.
+> Since add-on has to get data from [clicking YouTube comments' profiles](https://support.google.com/youtube/answer/9409333), it's unfeasible to use.
 
 - Step 1: `about:debugging#/runtime/this-firefox` → Temporary Extensions (0): Load Temporary Add-on... → select file → Open
 - Step 2: [www.youtube.com](https://www.youtube.com) → select a video to watch → scroll down to the comment section

@@ -1,19 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "test",
-  "short_name": "test",
+  "name": "[WIP] YouTube Profile Card Info",
   "version": "1.0.0",
   "description": "Comment Count • Hearts Received • Badges",
   "author": "Nhân Trí",
-  "homepage_url": "https://github.com/nhantrichuyenanh/YouTube-Ultimate-Comment-Section-Enhancer",
+  "homepage_url": "https://github.com/nhantrichuyenanh/WIP-YT-Profile-Card-Info",
   "content_scripts": [
     {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
-      "js": [
-        "content.js"
-      ],
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
       "all_frames": false,
       "run_at": "document_end"
     }

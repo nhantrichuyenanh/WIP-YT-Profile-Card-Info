@@ -8,5 +8,4 @@
 - Step 2: [www.youtube.com](https://www.youtube.com) → select a video to watch → scroll down to the comment section
 - Step 3: while add-on is doing its stuff, don't click anything and the more you scroll the more stuff it has to do
 
-![](demo/demonstration_2.jpg)
-![](demo/demonstration_1.jpg)
+![](/demo.jpg)

@@ -1,5 +1,6 @@
 >[!IMPORTANT]
 > Because YouTube changed its DOM, this add-on doesn't work anymore.
+
 >[!NOTE]
 > Since add-on has to get data from [clicking YouTube comments' profiles](https://support.google.com/youtube/answer/9409333), it's unfeasible to use.
 

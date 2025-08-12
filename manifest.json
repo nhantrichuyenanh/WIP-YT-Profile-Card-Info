@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "[WIP] YouTube Profile Card Info",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Comment Count • Hearts Received • Badges",
   "author": "Nhân Trí",
   "homepage_url": "https://github.com/nhantrichuyenanh/WIP-YT-Profile-Card-Info",
@@ -13,7 +13,7 @@
       "run_at": "document_end"
     }
   ],
-  "host_permissions": [
+  "permissions": [
     "https://www.youtube.com/watch?v=*",
     "https://www.youtube.com/shorts/*",
     "https://www.youtube.com/channel/*/community?*"

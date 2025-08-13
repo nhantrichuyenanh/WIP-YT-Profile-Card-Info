@@ -22,5 +22,8 @@ It faces several inherent constraints due to its operational approach:
 - Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible, information might not properly be extracted.
 - [Bring back YouTube Comment Usernames](https://addons.mozilla.org/firefox/addon/youtube-找回留言區用戶名稱) will break this add-on, specifically at the handle verification step.
 
+## Why can't you do away with programmatically clicking to extract information?
+YouTube doesn’t provide a public API for Profile Card information, so I have no choice. Sorry! ╯︿╰
+
 ## What is this add-on's purpose?
 Because helpful information is hidden in Profile Card, which is practically useless (user must manually **click** commenter's profile picture to access it, and barely anyone does that), this add-on makes it accessible at the user's **fingertips** (no pun intended 😅). For content creators, this information provides immediate context about commenters' activity patterns and community standing, such as the `hearts received` indicating how frequently they have acknowledged them.

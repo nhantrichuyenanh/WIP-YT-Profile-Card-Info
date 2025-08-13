@@ -20,7 +20,7 @@ It faces several inherent constraints due to its operational approach:
 - The more comments a YouTube video/short/community post has, the more it has to process, and it might miss one or two comments.
 - Since YouTube comment section loads dynamically, the user will have to scroll down for more comments to load for the add-on to process more comments. Because of this, it might not include the badge icon for some commenters' info boxes.
 - Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible, information might not properly be extracted.
-- [Bring back YouTube Comment Usernames](https://addons.mozilla.org/firefox/addon/youtube-找回留言區用戶名稱) will break this add-on, specifically at the handle verification step.
+- [Bring back YouTube Comment Usernames](https://addons.mozilla.org/firefox/addon/youtube-找回留言區用戶名稱) will render this add-on useless because of the handle verification step.
 
 ## Why can't you do away with programmatically clicking to extract information?
 YouTube doesn’t provide a public API for Profile Card, so I have no choice. Sincerely sorry! ╯︿╰

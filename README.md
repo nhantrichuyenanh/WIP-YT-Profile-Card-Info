@@ -8,7 +8,7 @@ It works by programmatically clicking on the commenter's profile picture to trig
 
 The extracted information includes three primary data types:
 - `total comments` the commenter has posted in all videos of a content creator's YouTube channel
-- `number of hearts` received from said content creator
+- number of `hearts received` from said content creator
 - any special `badges` associated with the commenter
 
 ## What is the technical implementation of this add-on?

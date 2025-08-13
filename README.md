@@ -26,4 +26,4 @@ It faces several inherent constraints due to its operational approach:
 YouTube doesn’t provide a public API for Profile Card, so I have no choice. Sincerely sorry! ╯︿╰
 
 ## What is this add-on's purpose?
-Because helpful information is hidden in Profile Card, which is practically useless (user must manually **click** commenter's profile picture to access it, and barely anyone does that), this add-on makes it accessible at the user's **fingertips** (no pun intended 😅). For content creators, this information provides immediate context about commenters' activity patterns and community standing, such as the `hearts received` indicating how frequently they have acknowledged them.
+A proof of concept to prove that helpful information can easily be made accessible at the user's **fingertips**. I've always find Profile Card to be practicaly useless, because user must manually **click** commenter's profile picture to access it, and barely anyone does that. Hopefully, someone from YouTube sees this and implements API-based solutions or just simply make Profile Cards more useful.

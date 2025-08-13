@@ -7,9 +7,9 @@ This is a browser extension designed to make [Profile Cards](https://support.goo
 It works by programmatically clicking on the commenter's profile picture to trigger YouTube's Profile Card popup. The add-on then extracts specific data points from this popup, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
 
 The extracted information includes three primary data types:
-- total comments the commenter has posted in all videos of a content creator's YouTube channel
-- number of hearts received from said content creator
-- any special badges associated with the commenter
+- `total comments` the commenter has posted in all videos of a content creator's YouTube channel
+- `number of hearts` received from said content creator
+- any special `badges` associated with the commenter
 
 ## What is the technical implementation of this add-on?
 

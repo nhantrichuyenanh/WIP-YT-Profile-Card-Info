@@ -4,18 +4,18 @@ This is a browser extension designed to make [Profile Cards](https://support.goo
 
 > What does this add-on do?
 
-- It works by programmatically clicks on the commenter's profile picture to trigger YouTube's profile card popup. The add-on then extracts specific data points from this popup, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
-- The extracted information includes three primary data types: total comments the commenter has posted in all videos of a content creator's YouTube channel, number of hearts received from said content creator, and any special badges associated with the commenter.
+It works by programmatically clicks on the commenter's profile picture to trigger YouTube's profile card popup. The add-on then extracts specific data points from this popup, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
 
+The extracted information includes three primary data types:
+- total comments the commenter has posted in all videos of a content creator's YouTube channel
+- number of hearts received from said content creator
+- any special badges associated with the commenter.
 
 > What is this add-on's technical implementation?
 
-- The extension uses a sophisticated queuing system to manage profile data extraction sequentially, preventing multiple simultaneous popup interactions that could interfere with each other. Comments are processed one at a time with configurable delays between operations.
-- The system employs mutation 
-observers to detect both existing comments on page load and new comments
- that appear during scrolling or dynamic loading. This ensures 
-comprehensive coverage regardless of how users navigate the comment 
-section.
+The extension uses a sophisticated queuing system to manage profile data extraction sequentially, preventing multiple simultaneous popup interactions that could interfere with each other. Comments are processed one at a time with configurable delays between operations.
+
+The system employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures comprehensive coverage regardless of how users navigate the comment section.
 
 
 Data extraction relies on 

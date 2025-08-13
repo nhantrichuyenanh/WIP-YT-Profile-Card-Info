@@ -13,7 +13,7 @@ The extracted information includes three primary data types:
 
 ## What is the technical implementation of this add-on?
 
-It uses a sophisticated queuing system to sequentially manage profile data extraction, **preventing multiple simultaneous popup interactions** that could interfere with each other. Comments are processed one at a time with delays between operations to make sure **information is properly extracted**. Handle verification is included to ensure the extracted profile information matches the intended commenter, **preventing misattribution in cases where popup timing issues might occur**.
+It uses a sophisticated queuing system to sequentially manage profile data extraction, *preventing multiple simultaneous popup interactions* that could interfere with each other. Comments are processed one at a time with delays between operations to make sure *information is properly extracted*. Handle verification is included to ensure the extracted profile information matches the intended commenter, *preventing misattribution in cases where popup timing issues might occur*.
 
 It also employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures **comprehensive coverage regardless of how user navigate the comment section**.
 
@@ -23,39 +23,12 @@ It faces several inherent constraints due to its operational approach:
 - Since it depends on YouTube's profile card interface, any changes to YouTube's DOM structure or CSS classes could break the data extraction functionality.
 - The more comments a YouTube video/short/community post has, the more it has to process, and it might miss one or two comments.
 - Since YouTube comment section loads dynamically, the user will have to scroll down for more comments to load for the add-on to process more comments. Because of this, it might not include the badge icon for some commenters' info.
-- Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible then information might not properly be extracted.
+- Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible, information might not properly be extracted.
 
 ## What is this add-on's purpose?
 
-It addresses a gap in YouTube's native comment interface by surfacing contextual 
-information that typically requires manual investigation. user can 
-quickly assess a commenter's engagement level and credibility without 
-needing to click through to individual profiles.
-
-
-For content creators and 
-community moderators, this information provides immediate context about 
-comment authors' activity patterns and community standing. The hearts 
-received metric indicates how frequently creators have acknowledged a 
-user's contributions, while the comment count suggests their overall 
-participation level across the platform.
-
-
-The badge system highlights 
-user with special recognition, such as long-term subscribers, top 
-contributors, or other community achievements. This context can inform 
-how user interpret and respond to comments, particularly in determining
- whether feedback comes from engaged community members versus casual 
-observers.
-
-
-The extension essentially 
-transforms passive comment consumption into a more informed experience 
-by providing relevant profile context without disrupting the natural 
-comment reading flow. This can lead to more meaningful community 
-interactions and help user identify valuable contributors within 
-YouTube's comment ecosystem.
-
+- Because helpful information like `comment count` and `badges` is hidden in Profile Card, which is practically useless (user must manually click profile picture, and barely anyone does that), this add-on makes it accessible at the user's fingertips.
+- For content creators, this information provides immediate context about commenters' activity patterns and community standing. For instance, the `hearts received` indicates how frequently creators have acknowledged them.
 YouTube doesn’t provide a public API for Profile Card information, so 
 this extension gathers it by opening each commenter’s profile popup and 
 reading the details. This may cause brief delays while processing 

@@ -1,8 +1,8 @@
-# What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
+## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
 
-# What does this add-on do?
+## What does this add-on do?
 
 It works by programmatically clicking on the commenter's profile picture to trigger YouTube's Profile Card popup. The add-on then extracts specific data points from this popup, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
 
@@ -11,13 +11,13 @@ The extracted information includes three primary data types:
 - number of hearts received from said content creator
 - any special badges associated with the commenter
 
-# What is this add-on's technical implementation?
+## What is the technical implementation of this add-on?
 
-It uses a sophisticated queuing system to sequentially manage profile data extraction, preventing multiple simultaneous popup interactions that could interfere with each other. Comments are processed one at a time with delays between operations to make sure information is properly extracted. Handle verification is included to ensure the extracted profile information matches the intended commenter, preventing misattribution in cases where popup timing issues might occur.
+It uses a sophisticated queuing system to sequentially manage profile data extraction, **preventing multiple simultaneous popup interactions** that could interfere with each other. Comments are processed one at a time with delays between operations to make sure **information is properly extracted**. Handle verification is included to ensure the extracted profile information matches the intended commenter, **preventing misattribution in cases where popup timing issues might occur**.
 
-It also employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures comprehensive coverage regardless of how user navigate the comment section.
+It also employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures **comprehensive coverage regardless of how user navigate the comment section**.
 
-# What are the known limitations of this add-on?
+## What are the known limitations of this add-on?
 
 It faces several inherent constraints due to its operational approach:
 - Since it depends on YouTube's profile card interface, any changes to YouTube's DOM structure or CSS classes could break the data extraction functionality.
@@ -25,7 +25,7 @@ It faces several inherent constraints due to its operational approach:
 - Since YouTube comment section loads dynamically, the user will have to scroll down for more comments to load for the add-on to process more comments. Because of this, it might not include the badge icon for some commenters' info.
 - Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible then information might not properly be extracted.
 
-# What is this add-on's purpose?
+## What is this add-on's purpose?
 
 It addresses a gap in YouTube's native comment interface by surfacing contextual 
 information that typically requires manual investigation. user can 

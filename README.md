@@ -16,7 +16,7 @@ It also employs mutation observers to detect both existing comments on page load
 
 ## What are the known limitations of this add-on?
 It faces several inherent constraints due to its operational approach:
-- Since it depends on YouTube's profile card interface, any changes to YouTube's DOM structure or CSS classes could break the data extraction functionality.
+- Since it depends on YouTube's Profile Card interface, any changes to YouTube's DOM structure or CSS classes could break the data extraction functionality.
 - The more comments a YouTube video/short/community post has, the more it has to process, and it might miss one or two comments.
 - Since YouTube comment section loads dynamically, the user will have to scroll down for more comments to load for the add-on to process more comments. Because of this, it might not include the badge icon for some commenters' info.
 - Its operations could interfere with user's interaction, such as while searching in the search box. If user clicks while Profile Card is visible, information might not properly be extracted.

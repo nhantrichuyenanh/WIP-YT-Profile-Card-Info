@@ -1,16 +1,10 @@
-> What is this add-on?
+> What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 
-This is a browser extension designed to enhance YouTube's comment section by
- displaying additional profile information about comment authors 
-directly beneath their usernames. The extension extracts data from 
-YouTube's profile cards and presents it in an organized, visually 
-integrated format.
+This is a browser (specifically Firefox and its forks) extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
 
+> What does this add-on do?
 
-Core Functionality
-
-
-The extension operates by 
+It operates by 
 intercepting user interactions with profile pictures in YouTube 
 comments. When processing a comment, it programmatically clicks on the 
 commenter's profile picture to trigger YouTube's native profile card 

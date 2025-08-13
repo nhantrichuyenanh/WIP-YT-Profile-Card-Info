@@ -12,7 +12,7 @@ The extracted information includes three primary data types:
 ## What is the technical implementation of this add-on?
 It uses a sophisticated queuing system to sequentially manage profile data extraction, *preventing multiple simultaneous pop-up interactions* that could interfere with each other. Comments are processed one at a time with delays between operations to make sure *information is properly extracted*. Handle verification is included to ensure the extracted profile information matches the intended commenter, *preventing misattribution in cases where pop-up timing issues might occur*.
 
-It also employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures **comprehensive coverage regardless of how user navigate the comment section**.
+It also employs mutation observers to detect both existing comments on page load and new comments that appear during scrolling or dynamic loading (sort to Newest, clicking on Replies). This ensures *comprehensive coverage regardless of how user navigate the comment section*.
 
 ## What are the known limitations of this add-on?
 It faces several inherent constraints due to its operational approach:

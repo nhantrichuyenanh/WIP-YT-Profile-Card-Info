@@ -27,3 +27,9 @@ YouTube doesn’t provide a public API for Profile Card, so I have no choice. Si
 
 ## What is this add-on's purpose?
 A **proof of concept** to demonstrate that helpful information can easily be made accessible at the user's **fingertips**. I've always find Profile Card to be practically useless since user must manually **click** the commenter's profile picture to access it, and barely anyone does that. Hopefully, someone from YouTube sees this and implements API-based solutions or just make Profile Cards more useful. **Until that day comes, this add-on will remain in development.**
+
+## Future development:
+| Feature to be implemented | CSS selector(s) |
+| Pronouns (yt is becoming woke lol) | `yt-profile-identity-info-view-model-wiz__metadata-pronouns` |
+| Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
+| Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!?) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |

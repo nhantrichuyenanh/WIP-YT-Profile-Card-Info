@@ -33,4 +33,4 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 | --- | --- |
 | Pronouns (yt is becoming woke lol) | `yt-profile-identity-info-view-model-wiz__metadata-pronouns` |
 | Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
-| Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, (wtf yt?!?)[evidence/1.png]) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
+| Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!? Check evidence folder) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |

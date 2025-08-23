@@ -37,8 +37,8 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 
 | ‎  |   |   |
 | --- | --- | ---|
-| ![](evidence/1.png) | ![](‎/evidence/2.png) | ![](‎/evidence/3.png) |
-| ![](/‎evidence/4.png) | ![](/‎evidence/5.png) | ![](‎/evidence/6.png) |
+| ![](evidence/1.png) | ![](‎evidence/2.png) | ![](‎evidence/3.png) |
+| ![](evidence/4.png) | ![](‎evidence/5.png) | ![](‎evidence/6.png) |
 
 
 > [!IMPORTANT]

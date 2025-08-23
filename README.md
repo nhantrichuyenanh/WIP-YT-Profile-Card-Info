@@ -36,4 +36,4 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 | Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!? Check evidence folder) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
 
 > [!IMPORTANT]
-> Considering YouTube is constantly changing its DOM structure, CSS classes, the fact that there's no API solution, this add-on will probably never see the light of the day.
+> Considering YouTube is constantly changing its DOM structure, CSS classes, and the fact that there's no API solution, this add-on will probably never see the light of the day.

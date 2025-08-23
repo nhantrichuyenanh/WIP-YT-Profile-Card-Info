@@ -36,8 +36,12 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 | Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!?) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
 
 
-| ![a](evidence/1.png) | ![a](‎evidence/2.png) | ![a](‎evidence/3.png) |
-| ![a](evidence/4.png) | ![a](‎evidence/5.png) | ![a](‎evidence/6.png) |
+| ![a](evidence/1.png) |
+![a](‎evidence/2.png) |
+![a](‎evidence/3.png) |
+| ![a](evidence/4.png) |
+![a](‎evidence/5.png) |
+![a](‎evidence/6.png) |
 
 
 > [!IMPORTANT]

@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Considering YouTube is constantly changing its DOM structure, CSS classes, and the fact that there's no API solution, this add-on will probably never see the light of the day.
+
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
 
@@ -41,6 +44,3 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 ![](evidence/4.png)
 ![](evidence/5.png)
 ![](evidence/6.png)
-
-> [!IMPORTANT]
-> Considering YouTube is constantly changing its DOM structure, CSS classes, and the fact that there's no API solution, this add-on will probably never see the light of the day.

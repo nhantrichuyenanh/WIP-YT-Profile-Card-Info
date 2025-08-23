@@ -35,13 +35,10 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 | Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
 | Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!?) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
 
-
-| ![a](evidence/1.png) |
-![a](‎evidence/2.png) |
-![a](‎evidence/3.png) |
-| ![a](evidence/4.png) |
-![a](‎evidence/5.png) |
-![a](‎evidence/6.png) |
+| ‎a | b | c |
+| --- | --- | ---|
+| ![](evidence/1.png) | ![](‎evidence/1.png) | ![](‎evidence/1.png) |
+| ![a](evidence/4.png) | ![](‎evidence/5.png) | ![](‎evidence/6.png) |
 
 
 > [!IMPORTANT]

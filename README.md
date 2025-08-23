@@ -34,3 +34,6 @@ A **proof of concept** to demonstrate that helpful information can easily be mad
 | Pronouns (yt is becoming woke lol) | `yt-profile-identity-info-view-model-wiz__metadata-pronouns` |
 | Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
 | Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!? Check evidence folder) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
+
+> [!NOTE]
+> Considering YouTube is constantly changing its DOM structure, CSS classes, the fact that there's no API solution, this add-on will probably never see the light of the day.

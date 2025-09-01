@@ -1,5 +1,6 @@
 > [!IMPORTANT]
 > Considering YouTube is constantly changing its DOM structure, CSS classes, and the fact that there's no API solution, this add-on will probably never see the light of the day.
+
 > [!NOTE]
 > **Update Sep 1st, 2025:** I've been made aware of YouTube's internal API, Innertube, that can reliably fetch Profile Card data and has no quota! The problem is that it's undocumented (internal API duh) so I have no idea how to use it. `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card` If anyone can reverse engineer this API, please make an issue!
 

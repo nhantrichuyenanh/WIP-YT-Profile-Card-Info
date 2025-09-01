@@ -1,5 +1,7 @@
 > [!IMPORTANT]
 > Considering YouTube is constantly changing its DOM structure, CSS classes, and the fact that there's no API solution, this add-on will probably never see the light of the day.
+> **Update Sep 1st, 2025:** I've been made aware of YouTube's internal API, Innertube, that can reliably fetch Profile Card data and has no quota! The problem is that it's undocumented (internal API duh) so I have no idea how to use it. `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card`
+> If anyone can reverse engineer this API, please make an issue!
 
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
@@ -27,6 +29,9 @@ It faces several inherent constraints due to its operational approach:
 
 ## Why can't you do away with programmatically clicking to extract information?
 YouTube doesn’t provide a public API for Profile Card, so I have no choice. Sincerely sorry! ╯︿╰
+
+Authorization
+	SAPISIDHASH 1756722847_dc7901e66d464158dbaa67ed38abb0bf798d6fc7_u SAPISID1PHASH 1756722847_dc7901e66d464158dbaa67ed38abb0bf798d6fc7_u SAPISID3PHASH 1756722847_dc7901e66d464158dbaa67ed38abb0bf798d6fc7_u`
 
 ## What is this add-on's purpose?
 A **proof of concept** to demonstrate that helpful information can easily be made accessible at the user's **fingertips**. I've always find Profile Card to be practically useless since user must manually **click** the commenter's profile picture to access it, and barely anyone does that. Hopefully, someone from YouTube sees this and implements API-based solutions or just make Profile Cards more useful. **Until that day comes, this add-on will remain in development.**

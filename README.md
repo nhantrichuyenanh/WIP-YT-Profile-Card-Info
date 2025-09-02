@@ -1,4 +1,4 @@
-> [!NIMPORTANT]
+> [!IMPORTANT]
 > **Update Sep 1st, 2025:** I've been made aware of YouTube's internal API, Innertube, that can reliably fetch Profile Card data and has no quota! The problem is that it's undocumented (internal API duh) so I have no idea how to use it. `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card` If anyone can reverse engineer this API, please make an issue!
 
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?

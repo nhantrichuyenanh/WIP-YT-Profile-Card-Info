@@ -35,7 +35,7 @@ Check the very top of this README.
 A **proof of concept** to demonstrate that helpful information can easily be made accessible at the user's **fingertips**. I've always find Profile Card to be practically useless since user must manually **click** the commenter's profile picture to access it, and barely anyone does that. Hopefully, someone from YouTube sees this and implements API-based solutions or just make Profile Cards more useful. **Until that day comes, this add-on will remain in development.**
 
 ## Future development...
-| Feature to be implemented | CSS selector(s) (as of writing/updating this README) |
+| Features to be implemented | CSS selectors (as of writing/updating this README) |
 | --- | --- |
 | Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
-| Subscriptions | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
+| Subscriptions | `ytProfileInfoViewModelSubSection`, `ytCoreImageHost yt-spec-avatar-shape__image ytCoreImageFillParentHeight ytCoreImageFillParentWidth ytCoreImageContentModeScaleToFill ytCoreImageLoaded`, `ytSharedSubscriptionViewModelChannelName` |

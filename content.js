@@ -1,6 +1,8 @@
 (function() {
     'use strict';
 
+    console.log("[WIP] YouTube Profile Card Info: Add-on started");
+
     // CONFIGURABLE VARIABLES //
     const ANIMATION_DURATION = 1;           // s for transitions
     const ANIMATION_DELAY = 0;              // ms before starting animation
@@ -35,6 +37,7 @@
 
     // info box
     function createInfoBox(icon, text) {
+        console.log("[WIP] YouTube Profile Card Info: Creating info box", { icon, text });
         if (!text || text === 'N/A') return null;
         const box = document.createElement('div');
         box.className = 'yt-enhanced-info-item';
@@ -45,6 +48,7 @@
 
     // badge info box with title and subtitle
     function createBadgeBox(icon, badgeTitle, badgeSubtitle) {
+        console.log("[WIP] YouTube Profile Card Info: Creating badge box", { icon, badgeTitle, badgeSubtitle });
         if (!badgeTitle) return null;
         const box = document.createElement('div');
         box.className = 'yt-enhanced-badge-item';
@@ -93,6 +97,7 @@
 
     // info box styling
     function styleInfoBox(el) {
+        console.log("[WIP] YouTube Profile Card Info: Styling info box");
         el.style.background = GENERAL_BACKGROUND;
         el.style.color = TEXT_COLOR;
         el.style.padding = PADDING;
@@ -105,8 +110,12 @@
 
     // profile information from popup
     function extractProfileInfo() {
-        const profileCard = document.querySelector('.yt-profile-card-view-model-wiz');
-        if (!profileCard) return null;
+        console.log("[WIP] YouTube Profile Card Info: Extracting profile info from popup");
+        const profileCard = document.querySelector('.ytProfileCardViewModelHost');
+        if (!profileCard) {
+            console.log("[WIP] YouTube Profile Card Info: No profile card found");
+            return null;
+        }
         const info = {
             commentsCount: null,
             heartsReceived: null,
@@ -115,33 +124,45 @@
         };
 
         // username
-        const usernameElement = profileCard.querySelector('.yt-profile-identity-info-view-model-wiz__metadata-handle-with-bold-font');
+        const usernameElement = profileCard.querySelector('.yt-profile-identity-info-view-model__metadata-handle-with-bold-font');
         if (usernameElement) {
             info.userName = usernameElement.textContent.trim();
+            console.log("[WIP] YouTube Profile Card Info: Username found", info.userName);
         }
 
         // comments count
-        const sectionDescriptions = profileCard.querySelectorAll('.yt-profile-info-view-model-wiz__section-desc');
+        const sectionDescriptions = profileCard.querySelectorAll('.ytProfileInfoViewModelSectionDesc');
         if (sectionDescriptions && sectionDescriptions.length > 0) {
-            const subtitles = sectionDescriptions[0].querySelectorAll('.yt-profile-info-view-model-wiz__section-subtitle');
+            const subtitles = sectionDescriptions[0].querySelectorAll('.ytProfileInfoViewModelSectionSubtitle');
             if (subtitles && subtitles.length > 0) {
                 info.commentsCount = subtitles[0].textContent.trim();
+                console.log("[WIP] YouTube Profile Card Info: Comments count found", info.commentsCount);
             }
 
             // hearts received
-            const heartIcon = sectionDescriptions[0].querySelector('.yt-profile-info-view-model-wiz__section-heart-icon');
+            const heartIcon = sectionDescriptions[0].querySelector('.ytProfileInfoViewModelSectionHeartIcon');
             if (heartIcon) {
                 const heartSubtitle = heartIcon.nextElementSibling;
-                if (heartSubtitle && heartSubtitle.classList.contains('yt-profile-info-view-model-wiz__section-subtitle')) {
+                if (heartSubtitle && heartSubtitle.classList.contains('ytProfileInfoViewModelSectionSubtitle')) {
                     info.heartsReceived = heartSubtitle.textContent.trim();
+                    console.log("[WIP] YouTube Profile Card Info: Hearts received found", info.heartsReceived);
                 }
             }
         }
 
+    // pronouns
+    const pronounsElem = profileCard.querySelector('.yt-profile-identity-info-view-model__metadata-pronouns');
+    if (pronounsElem) {
+        info.pronouns = pronounsElem.textContent.trim();
+        const delimiter = profileCard.querySelector('.yt-profile-identity-info-view-model__metadata-delimiter');
+        info.pronounsHasDelimiter = !!delimiter;
+        console.log("[WIP] YouTube Profile Card Info: Pronouns found", info.pronouns);
+    }
+
         // badge info
-        const badgeSection = profileCard.querySelector('.yt-profile-info-view-model-wiz__badge');
+        const badgeSection = profileCard.querySelector('.ytProfileInfoViewModelBadge');
         if (badgeSection) {
-            const badges = badgeSection.querySelectorAll('.profile-badge-view-model-wiz');
+            const badges = badgeSection.querySelectorAll('.profileBadgeViewModelHost');
             if (badges && badges.length > 0) {
                 badges.forEach(badge => {
                     const badgeInfo = {
@@ -151,13 +172,13 @@
                     };
 
                     // badge title
-                    const badgeTitle = badge.querySelector('.profile-badge-view-model-wiz__badge-description');
+                    const badgeTitle = badge.querySelector('.profileBadgeViewModelBadgeDescription');
                     if (badgeTitle) {
                         badgeInfo.title = badgeTitle.textContent.trim();
                     }
 
                     // badge subtitle
-                    const badgeSubtitle = badge.querySelector('.profile-badge-view-model-wiz__badge-subtitle');
+                    const badgeSubtitle = badge.querySelector('.profileBadgeViewModelBadgeSubtitle');
                     if (badgeSubtitle) {
                         badgeInfo.subtitle = badgeSubtitle.textContent.trim();
                     }
@@ -170,6 +191,7 @@
 
                     if (badgeInfo) {
                         info.badges.push(badgeInfo);
+                        console.log("[WIP] YouTube Profile Card Info: Badge info found", badgeInfo);
                     }
                 });
             }
@@ -180,24 +202,30 @@
 
     // click profile picture and wait for popup to extract info
     async function getProfileInfo(profilePic) {
+        console.log("[WIP] YouTube Profile Card Info: Getting profile info for profilePic", profilePic);
         return new Promise((resolve) => {
             profilePic.click();
+            console.log("[WIP] YouTube Profile Card Info: Profile picture clicked");
 
             // wait for popup to appear and extract info
             let attempts = 0;
             const checkInterval = setInterval(() => {
                 attempts++;
+                console.log("[WIP] YouTube Profile Card Info: Checking for popup, attempt", attempts);
                 const profileInfo = extractProfileInfo();
                 if (profileInfo || attempts >= POPUP_MAX_ATTEMPTS) {
                     clearInterval(checkInterval);
+                    console.log("[WIP] YouTube Profile Card Info: Popup found or max attempts reached");
 
                     // delay before closing the popup to ensure complete data extraction
                     setTimeout(() => {
                         // click somewhere else to close the popup
                         document.body.click();
+                        console.log("[WIP] YouTube Profile Card Info: Closing popup");
 
                         // add additional delay to ensure popup is fully closed
                         setTimeout(() => {
+                            console.log("[WIP] YouTube Profile Card Info: Profile info resolved", profileInfo);
                             resolve(profileInfo || {});
                         }, POPUP_FULLY_CLOSED_DELAY);
                     }, POPUP_CLOSE_DELAY);
@@ -209,25 +237,31 @@
     // get username from comment element
     function getUsernameFromComment(commentElement) {
         const authorElement = commentElement.querySelector('#author-text');
-        return authorElement ? authorElement.textContent.trim() : null;
+        const username = authorElement ? authorElement.textContent.trim() : null;
+        console.log("[WIP] YouTube Profile Card Info: Username from comment", username);
+        return username;
     }
 
     // add profile info to comment
     async function addProfileInfo(commentElement) {
+        console.log("[WIP] YouTube Profile Card Info: Adding profile info to comment", commentElement);
         // check if we've already processed this comment
         if (commentElement.querySelector('.yt-profile-info')) {
+            console.log("[WIP] YouTube Profile Card Info: Comment already processed");
             processNextInQueue();
             return;
         }
 
         const authorElement = commentElement.querySelector('div#header-author, .author');
         if (!authorElement) {
+            console.log("[WIP] YouTube Profile Card Info: No author element found");
             processNextInQueue();
             return;
         }
 
         const profilePic = commentElement.querySelector('img.style-scope.yt-img-shadow');
         if (!profilePic) {
+            console.log("[WIP] YouTube Profile Card Info: No profile picture found");
             processNextInQueue();
             return;
         }
@@ -235,6 +269,7 @@
         // get the username from the comment before clicking
         const commentUsername = getUsernameFromComment(commentElement);
         if (!commentUsername) {
+            console.log("[WIP] YouTube Profile Card Info: No username found in comment");
             processNextInQueue();
             return;
         }
@@ -250,13 +285,16 @@
         infoContainer.style.width = '100%';
         infoContainer.style.maxWidth = '800px';
         authorElement.parentNode.insertBefore(infoContainer, authorElement.nextSibling);
+        console.log("[WIP] YouTube Profile Card Info: Info container inserted");
 
         try {
             // get profile info from popup
             const profileInfo = await getProfileInfo(profilePic);
+            console.log("[WIP] YouTube Profile Card Info: Profile info received", profileInfo);
 
             // verify username match before proceeding
             if (!profileInfo || !profileInfo.userName || profileInfo.userName !== commentUsername) {
+                console.log("[WIP] YouTube Profile Card Info: Username mismatch or no profile info");
                 infoContainer.remove();
                 processNextInQueue();
                 return;
@@ -284,6 +322,11 @@
                 if (heartsBox) leftColumn.appendChild(heartsBox);
             }
 
+            if (profileInfo.pronouns) {
+                const pronounsBox = createInfoBox('👤', profileInfo.pronouns);
+                if (pronounsBox) leftColumn.appendChild(pronounsBox);
+            }
+
             if (profileInfo.badges && profileInfo.badges.length > 0) {
                 profileInfo.badges.forEach(badge => {
                     let badgeIcon = '';
@@ -300,6 +343,7 @@
             if (rightColumn.children.length > 0) infoContainer.appendChild(rightColumn);
 
             if (infoContainer.children.length === 0) {
+                console.log("[WIP] YouTube Profile Card Info: No info to display, removing container");
                 infoContainer.remove();
             } else {
                 infoContainer.style.opacity = '0';
@@ -308,9 +352,11 @@
                     infoContainer.style.transition = `transform ${ANIMATION_DURATION}s ease, opacity ${ANIMATION_DURATION}s ease`;
                     infoContainer.style.transform = 'translateY(0)';
                     infoContainer.style.opacity = '1';
+                    console.log("[WIP] YouTube Profile Card Info: Info container animated in");
                 }, ANIMATION_DELAY);
             }
         } catch (error) {
+            console.log("[WIP] YouTube Profile Card Info: Error adding profile info", error);
             infoContainer.remove();
         }
 
@@ -319,8 +365,10 @@
 
     // process the next comment in the queue
     function processNextInQueue() {
+        console.log("[WIP] YouTube Profile Card Info: Processing next in queue");
         if (processingQueue.length === 0) {
             isProcessing = false;
+            console.log("[WIP] YouTube Profile Card Info: Processing queue empty");
             return;
         }
 
@@ -333,6 +381,7 @@
     function queueCommentForProcessing(comment) {
         // skip if already processed or queued
         if (comment.dataset.processingQueued === 'true' || comment.querySelector('.yt-profile-info')) {
+            console.log("[WIP] YouTube Profile Card Info: Comment already queued or processed");
             return;
         }
 
@@ -341,6 +390,7 @@
 
         // add to processing queue
         processingQueue.push(comment);
+        console.log("[WIP] YouTube Profile Card Info: Comment queued for processing", comment);
 
         // start processing if not already running
         if (!isProcessing) {
@@ -350,6 +400,7 @@
 
     // process existing comments in sequence
     function processExistingComments() {
+        console.log("[WIP] YouTube Profile Card Info: Processing existing comments");
         const comments = document.querySelectorAll('ytd-comment-view-model');
         comments.forEach(comment => {
             queueCommentForProcessing(comment);
@@ -364,11 +415,13 @@
                     // check if the added node is a comment or contains comments
                     if (node.nodeType === 1) {
                         if (node.tagName === 'YTD-COMMENT-VIEW-MODEL') {
+                            console.log("[WIP] YouTube Profile Card Info: New comment node added");
                             queueCommentForProcessing(node);
                         } else {
                             // check for comments within the added node
                             const comments = node.querySelectorAll('ytd-comment-view-model');
                             comments.forEach(comment => {
+                                console.log("[WIP] YouTube Profile Card Info: New comment found within added node");
                                 queueCommentForProcessing(comment);
                             });
                         }
@@ -380,6 +433,7 @@
 
     // initial setup when page loads
     function initialize() {
+        console.log("[WIP] YouTube Profile Card Info: Initializing");
         // process any existing comments
         processExistingComments();
 
@@ -395,6 +449,7 @@
 
     // check if page is fully loaded, otherwise wait
     if (document.readyState === 'complete') {
+        console.log("[WIP] YouTube Profile Card Info: Document ready, initializing");
         initialize();
     } else {
         window.addEventListener('load', initialize);

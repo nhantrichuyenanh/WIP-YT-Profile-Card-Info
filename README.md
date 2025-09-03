@@ -7,7 +7,7 @@ This is a browser extension designed to make [Profile Cards](https://support.goo
 ## What does this add-on do?
 It works by programmatically clicking on the commenter's profile picture to trigger YouTube's Profile Card pop-up. The add-on then extracts specific data points from this pop-up, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
 
-The extracted information are three data types:
+As of writing/updating this README, the extracted information are four data types:
 - `total comments` the commenter has posted in all videos of a content creator's YouTube channel
 - number of `hearts received` from said content creator
 - `pronouns` next to handle

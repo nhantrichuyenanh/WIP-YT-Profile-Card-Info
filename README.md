@@ -7,7 +7,7 @@
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
 
 ## What does this add-on do?
-It works by programmatically clicking on the commenter's profile picture to trigger YouTube's Profile Card pop-up. The add-on then extracts specific data points from this pop-up, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle.
+It works by programmatically clicking on the commenter's profile picture to trigger YouTube's Profile Card pop-up. The add-on then extracts specific data points from this pop-up, closes it automatically, and displays the extracted information as info boxes beneath the commenter's handle. It is partially forked from [YouTube™ Commenter Info](https://addons.mozilla.org/addon/yt-cmt-info), another related add-on.
 
 As of writing/updating this README, the extracted information are four data types:
 - `total comments` the commenter has posted in all videos of a content creator's YouTube channel

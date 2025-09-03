@@ -10,6 +10,7 @@ It works by programmatically clicking on the commenter's profile picture to trig
 The extracted information are three data types:
 - `total comments` the commenter has posted in all videos of a content creator's YouTube channel
 - number of `hearts received` from said content creator
+- `pronouns` next to handle
 - any special `badges` associated with the commenter
 
 ## What is the technical implementation of this add-on?
@@ -32,15 +33,7 @@ Check the very top of this README.
 A **proof of concept** to demonstrate that helpful information can easily be made accessible at the user's **fingertips**. I've always find Profile Card to be practically useless since user must manually **click** the commenter's profile picture to access it, and barely anyone does that. Hopefully, someone from YouTube sees this and implements API-based solutions or just make Profile Cards more useful. **Until that day comes, this add-on will remain in development.**
 
 ## Future development...
-| Feature to be implemented | CSS selector(s) (YouTube changed them again 🥲) |
+| Feature to be implemented | CSS selector(s) (as of writing/updating this README) |
 | --- | --- |
-| Pronouns (yt is becoming woke lol) | `yt-profile-identity-info-view-model-wiz__metadata-pronouns` |
 | Recent comments on this channel | `ytProfileInfoViewModelActivity`, `ytCommentInteractionViewModelVideoTitle`, `ytCommentInteractionViewModelCommentContent` |
-| Subscriptions (some commenters' profile cards show this even though they don't have the Public subscriber badge, wtf yt?!?) | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |
-
-![](evidence/1.png)
-![](evidence/2.png)
-![](evidence/3.png)
-![](evidence/4.png)
-![](evidence/5.png)
-![](evidence/6.png)
+| Subscriptions | `yt-spec-avatar-shape--avatar-size-medium`, `ytSharedSubscriptionViewModelChannelName` |

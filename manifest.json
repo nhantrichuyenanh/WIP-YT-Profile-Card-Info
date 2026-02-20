@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "[WIP] YouTube Profile Card Info",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Comment Count • Hearts Received • Badges",
   "author": "Nhân Trí",
   "homepage_url": "https://github.com/nhantrichuyenanh/WIP-YT-Profile-Card-Info",
@@ -12,16 +12,16 @@
     "128": "icon.svg"
   },
   "host_permissions": [
-    "https://www.youtube.com/watch?v=*",
+    "https://www.youtube.com/watch*",
     "https://www.youtube.com/shorts/*",
-    "https://www.youtube.com/channel/*/community?*"
+    "https://www.youtube.com/post/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.youtube.com/watch?v=*",
+        "https://www.youtube.com/watch*",
         "https://www.youtube.com/shorts/*",
-        "https://www.youtube.com/channel/*/community?*"
+        "https://www.youtube.com/post/*"
       ],
       "js": ["content.js"],
       "css": ["styles.css"],
@@ -34,4 +34,5 @@
       "strict_min_version": "109.0"
     }
   }
+
 }

@@ -6,6 +6,63 @@
 > `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card`
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
+> [Example](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
+```
+...
+"profileBadgeInfoChannelWide": {
+                        "badges": [
+                            {
+                                "badgeIconUrl": "https://www.gstatic.com/youtube/img/identity/top_commenter_v1.png",
+                                "badgeDesc": "Top commenter",
+                                "badgeSubtitle": "Received one of the highest number of hearts from CodeSource"
+                            }
+                        ],
+                        "profileSectionTitle": "On this channel",
+                        "commentBadge": {
+                            "commentBadgeIconUrl": "https://www.gstatic.com/images/icons/material/system/1x/comment_grey600_36dp.png",
+                            "blackHeartIconUrl": "https://www.gstatic.com/images/icons/material/system/1x/favorite_grey600_36dp.png",
+                            "commentDesc": "22 comments",
+                            "blackHeartDesc": "7 received",
+                            "commentBadgeA11yLabel": "Comment Badge",
+                            "blackHeartA11yLabel": "Heart Badge"
+                        }
+                    },
+...
+commentInteractionViewModel": {
+                                                                "headerPrefix": "Commented on",
+                                                                "videoTitle": "The Untold Story of NoSQL Databases",
+                                                                "commentContent": "Schema didn't disappear, it moved.\" This line stuck with me",
+                                                                "chevronUrl": "https://www.gstatic.com/images/icons/material/system/1x/keyboard_arrow_right_grey600_36dp.png",
+                                                                "index": 0,
+                                                                "onTapA11yLabel": "View comment",
+                                                                "rendererContext": {
+                                                                    "commandContext": {
+                                                                        "onTap": {
+                                                                            "innertubeCommand": {
+                                                                                "clickTrackingParams": "CAUQppQJGAEiEwjA6rnwwvSSAxVKLtYAHScRCqjKAQSxn_dk",
+                                                                                "commandMetadata": {
+                                                                                    "webCommandMetadata": {
+                                                                                        "sendPost": true,
+                                                                                        "apiUrl": "/youtubei/v1/notification/get_notification_menu"
+                                                                                    }
+                                                                                },
+                                                                                "getCommentsFromInboxCommand": {
+                                                                                    "videoId": "jnKy3yYHVsQ",
+                                                                                    "linkedCommentId": "UgwrVpA2j0sxSYIRo4F4AaABAg",
+                                                                                    "commentsFromInboxType": "COMMENTS_FROM_INBOX_TYPE_PROFILE_CARDS"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "loggingDirectives": {
+                                                                    "trackingParams": "CAUQppQJGAEiEwjA6rnwwvSSAxVKLtYAHScRCqg=",
+                                                                    "visibility": {
+                                                                        "types": "12"
+                                                                    }
+                                                                }
+                                                            }
+```
 
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.

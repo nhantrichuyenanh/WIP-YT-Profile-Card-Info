@@ -4,6 +4,8 @@
 > **Update Feb 23rd, 2026:** Apparently, YouTube Data API doesn't have a Profile Card endpoint... What a bummer. I've been struggling with Innertube <img src="https://i.redd.it/56ugzx443r591.jpg" width="15"/>.
 
 > `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card`
+>
+> Open a YouTube video, scroll down to the comments section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
 
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.

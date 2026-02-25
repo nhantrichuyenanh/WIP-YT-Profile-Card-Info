@@ -6,7 +6,8 @@
 > `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card`
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
-> [Example](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
+
+[Example of Response](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
 ```
 ...
 "profileBadgeInfoChannelWide": {

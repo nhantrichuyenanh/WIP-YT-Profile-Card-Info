@@ -66,7 +66,7 @@ commentInteractionViewModel": {
                                                             }
 ```
 ## Claude
-From Claude's analysis:
+Analysis:
 ```
 Request:
 - Body is gzip-compressed protobuf (not JSON, despite Content-Type: application/json in headers)
@@ -87,7 +87,7 @@ What blocks external access:
 - The protobuf body contains session-specific tokens generated internally by YouTube's JS that can't be intercepted before they're set
 ```
 
-Claude's prompt:
+Prompt:
 ```
 YouTube InnerTube get_profile_card
 

@@ -67,10 +67,11 @@ commentInteractionViewModel": {
 
 From Claude's analysis:
 ```
-Body is gzip-compressed protobuf (not JSON, despite Content-Type: application/json in headers)
-Required headers include X-Origin: https://www.youtube.com, Authorization: SAPISIDHASH ..., X-Goog-Visitor-Id, X-Youtube-Bootstrap-Logged-In: true
-SAPISIDHASH is time-based: SHA1(timestamp + " " + SAPISID + " " + https://www.youtube.com) and expires quickly
-The request must originate from a genuine browser session — YouTube detects and rejects external replication
+Request:
+- Body is gzip-compressed protobuf (not JSON, despite Content-Type: application/json in headers)
+- Required headers include X-Origin: https://www.youtube.com, Authorization: SAPISIDHASH ..., X-Goog-Visitor-Id, X-Youtube-Bootstrap-Logged-In: true
+- SAPISIDHASH is time-based: SHA1(timestamp + " " + SAPISID + " " + https://www.youtube.com) and expires quickly
+- The request must originate from a genuine browser session — YouTube detects and rejects external replication
 
 data.profileCard.profileCardViewModel.profileIdentityInfo.profileIdentityInfoViewModel contains:
 - channelDisplayName — channel name
@@ -83,6 +84,24 @@ data.profileCard.profileCardViewModel.profileIdentityInfo.profileIdentityInfoVie
 What blocks external access:
 - YouTube's CSRF protection rejects requests where it can't verify browser origin
 - The protobuf body contains session-specific tokens generated internally by YouTube's JS that can't be intercepted before they're set
+```
+
+Claude's prompt:
+```
+YouTube InnerTube get_profile_card
+
+I'm trying to call YouTube's internal InnerTube API endpoint POST https://www.youtube.com/youtubei/v1/account/get_profile_card from Node.js.
+
+What we know:
+- Body is gzip-compressed protobuf (despite Content-Type: application/json header)
+- Required headers: X-Origin: https://www.youtube.com, Authorization: SAPISIDHASH, X-Goog-Visitor-Id, X-Youtube-Bootstrap-Logged-In: true, Content-Encoding: gzip
+- SAPISIDHASH formula: SHA1(timestamp + " " + SAPISID_cookie + " " + "https://www.youtube.com") — must be freshly generated each run
+- The protobuf body schema is unknown — we never successfully decoded it
+- YouTube returns 400 "invalid argument" for any body we construct, and 400 "unsafe for trusted domain" when SAPISIDHASH is stale
+
+Known response structure: data.profileCard.profileCardViewModel.profileIdentityInfo.profileIdentityInfoViewModel → channelDisplayName, channelHandle, leftOfBulletInfo, rightOfBulletInfo, avatar.avatarViewModel.image.sources[]
+
+The core unsolved problem: The exact protobuf field layout of the request body. We need to either decode a real raw request binary, or use Puppeteer/Playwright to let YouTube's own JS build the request and intercept the response.
 ```
 
 ---

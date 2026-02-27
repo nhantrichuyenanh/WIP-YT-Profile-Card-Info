@@ -65,6 +65,28 @@ commentInteractionViewModel": {
                                                             }
 ```
 
+From Claude's analysis:
+```
+Body is gzip-compressed protobuf (not JSON, despite Content-Type: application/json in headers)
+Required headers include X-Origin: https://www.youtube.com, Authorization: SAPISIDHASH ..., X-Goog-Visitor-Id, X-Youtube-Bootstrap-Logged-In: true
+SAPISIDHASH is time-based: SHA1(timestamp + " " + SAPISID + " " + https://www.youtube.com) and expires quickly
+The request must originate from a genuine browser session — YouTube detects and rejects external replication
+
+data.profileCard.profileCardViewModel.profileIdentityInfo.profileIdentityInfoViewModel contains:
+- channelDisplayName — channel name
+- channelHandle — e.g. @codeninja-d3w
+- leftOfBulletInfo — join date
+- rightOfBulletInfo — subscriber count
+- avatar.avatarViewModel.image.sources[] — avatar URLs at 48px, 88px, 176px
+- profileInfoSection contains recent comments and badges (e.g. "Top commenter")
+
+What blocks external access:
+- YouTube's CSRF protection rejects requests where it can't verify browser origin
+- The protobuf body contains session-specific tokens generated internally by YouTube's JS that can't be intercepted before they're set
+```
+
+---
+
 ## What is this [add-on](https://addons.mozilla.org/firefox/addon/wip-yt-profile-card-info)?
 This is a browser extension designed to make [Profile Cards](https://support.google.com/youtube/answer/9409333) useful by extracting data from it and displaying that data below YouTube comments' handles as info boxes.
 

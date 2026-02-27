@@ -119,7 +119,7 @@ As of writing/updating this README, the extracted information are four data type
 - `pronouns` next to handle
 - any special `badges` associated with the commenter
 - `recent comments` on a channel
-- `subscription`
+- `subscriptions`
 
 ## What is the technical implementation of this add-on?
 It uses a sophisticated queuing system to sequentially manage profile data extraction, preventing multiple simultaneous pop-up interactions that could interfere with each other. Comments are processed one at a time with delays between operations to make sure information is properly extracted. Handle verification is included to ensure the extracted profile information matches the intended commenter, preventing misattribution in cases where pop-up timing issues might occur.

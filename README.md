@@ -9,7 +9,9 @@
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
 >
 > Use <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"> <path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5zM...Z"/> </svg> to navigate this README.md.
-
+<svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5zM...Z"/>
+</svg>
 [Example of Response](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
 ```
 ...

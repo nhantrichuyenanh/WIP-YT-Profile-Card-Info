@@ -8,7 +8,7 @@
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
 >
-> Use <img src="https://www.flaticon.com/free-icon/list_151917" width="15"> to navigate this README.md.
+> Use <img src="https://icons.veryicon.com/png/o/application/immwa2016/list-11.png" width="15"> to navigate this README.md.
 
 [Example of Response](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
 ```

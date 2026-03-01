@@ -8,7 +8,7 @@
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
 >
-> Use <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"> <path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5zM...Z"/> </svg> to navigate this README.md.
+> Use <img src="https://github.githubassets.com/images/icons/emoji/list-unordered.svg" width="16" alt="list icon"> to navigate this README.md.
 <svg class="octicon octicon-list-unordered" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 4h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 4h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2 3.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm0 4a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm0 4a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Z"></path></svg>
 
 

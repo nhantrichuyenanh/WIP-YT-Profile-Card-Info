@@ -7,6 +7,8 @@
 > `POST: https://www.youtube.com/youtubei/v1/account/get_profile_card`
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
+>
+> Use <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M8.75 5.5h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5Zm0 6h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5Zm0 6h11.5a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5ZM5 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM4 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> to navigate this README.md.
 
 [Example of Response](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
 ```

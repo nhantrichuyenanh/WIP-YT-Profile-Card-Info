@@ -8,7 +8,7 @@
 >
 > Open a YouTube video, scroll down to the comment section, open DevTools, open the Network tab, click on a profile picture of any commenter, right click on the `get_profile_card` request, Copy Value, Copy Response.
 >
-> Use GitHub's table of content button in the header to navigate in this README.md.
+> **Use GitHub's table of content button in the header to navigate in this README.md.**
 
 [Example of Response](https://www.youtube.com/watch?v=vBhaFvwvRac&lc=UgzFjS3TkLJ3QZ51Vup4AaABAg):
 ```
